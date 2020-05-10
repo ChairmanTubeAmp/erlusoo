@@ -27,7 +27,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 
 #### Instructions:
 
-1. Install [squid](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
+1. Install squid using these [instructions](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
 1. Copy `myCA.pem` to `/etc/squid/certs/`
 1. Append the config in `/etc/config/firewall` to the version on your router. Find and replace xx:xx:xx:xx:xx:xx and yy:yy:yy:yy:yy:yy with actual MAC addresses.
