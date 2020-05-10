@@ -27,7 +27,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 
 ### Instructions:
 #### On your openWRT router
-1. Install squid using these [instructions](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
+1. Install squid using these [instructions](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 5) and replace `/etc/squid/squid.conf` with this version
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
 1. Copy `myCA.pem` to `/etc/squid/certs/`
 1. Create DH paramaters with `openssl dhparam -outform PEM -out /etc/squid/certs/dhparam.pem 2048`
