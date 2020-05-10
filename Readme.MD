@@ -5,7 +5,7 @@
 
 Your kid is stuck at home and is supposed to be reading and doing school work with whatever minimal guidance your teachers are able to provide. But most of the day they watch youtube, play games you've never heard of (and some you have), and generally waste their day online. Wouldn't it be nice if they were only able to vists sites specifically needed for their school work?
 
-Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most [openWRT](https://openwrt.org) routers. Since it doesn't run on your child's device, it can block traffic from any operating system: Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO is for you.
+Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most [openWRT](https://openwrt.org) routers. Since it runs on your router and not your child's device, squid can block traffic from any operating system: Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO is for you.
 
 #### Pre-requisites:
 
@@ -35,7 +35,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. restart squid with `service squid restart` and the firewall with `service firewall restart`
 
 #### On your child's device(s)
-1. From your kid's device, you should see certificate errors in the browser now. This means that the firewall is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out.
+1. From your kid's device, you should see certificate errors in the browser now. This means that the firewall on your router is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out.
 1. Instal the self-signed certificate you generated (`myCA.der`) into the browser of your child's device as a Certificate Authority (this process varies depending on which operating system your child's device uses.)
 1. Many Google properties (such as Youtube, are you noticing a theme here?) use extensive browser caching of the webapp so you'll need to clear all browsing history and data.
 1. As your child tries to work they will encounter legitimate sites that are blocked. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
