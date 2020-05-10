@@ -25,7 +25,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. You don't mind constantly adding sites to `/etc/squid/whitelist.txt` as teachers hand out assignments that require new random websites. Good luck blocking Youtube. Don't forget to restart squid.
 1. You already have `ssh` setup and are comfortable with the linux command line.
 
-#### Instructions:
+### Instructions:
 #### On your openWRT router
 1. Install squid using these [instructions](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
