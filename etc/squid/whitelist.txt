@@ -66,3 +66,4 @@ photos.google.com
 sheets.google.com
 slides.google.com
 support.google.com
+www.google.com
