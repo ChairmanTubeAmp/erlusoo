@@ -1,6 +1,7 @@
 # Fun
 ##########
-.classicreload.com
+#.classicreload.com
+#.getepic.com
 
 # School
 ##########
@@ -10,8 +11,8 @@
 .checkip.amazonaws.com
 .cloudfront.net
 .flocabulary.com
-#.getepic.com
 .glencoe.com
+.gmail.com
 .googleapis.com
 .googleusercontent.com
 .gradecam.com
@@ -36,7 +37,8 @@ icons.bitwarden.net
 .textnow.com
 .typing.com
 .wikipedia.org
-gmail.com
+.finance.yahoo.com
+.yimg.com
 aa.google.com
 accounts.google.com
 apis.google.com
@@ -64,6 +66,3 @@ photos.google.com
 sheets.google.com
 slides.google.com
 support.google.com
-#www.google.com
-.finance.yahoo.com
-.yimg.com
