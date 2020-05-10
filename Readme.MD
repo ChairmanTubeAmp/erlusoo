@@ -41,7 +41,8 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. As your child tries to work they will encounter legitimate sites that are blocked. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
 ```bash
 tail -F /tmp/squid/log/access.log \
-|grep 403 |grep -v play.google.com \
+|grep 403 \
+|grep -v play.google.com \
 |grep -v IP_ADDRESS_OF_OTHER_CHILD_IF_YOU_HAVE_MORE_THAN_ONE_CHILD
 ```
 
