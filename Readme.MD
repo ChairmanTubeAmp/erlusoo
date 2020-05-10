@@ -5,14 +5,14 @@ Description:
 
 Your kid is stuck at home and is supposed to be reading and doing school work with whatever minimal guidance your teachers are able to provide. But most of the day they watch youtube, play games you've never heard of (and some you have), and generally waste their day online. Wouldn't it be nice if they were only able to vists sites specifically needed for their school work?
 
-Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most openWRT[https://openwrt.org] routers. Since it doesn't run on your child's device, it can block traffic from any operating system: Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO is for you.
+Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most [openWRT](https://openwrt.org) routers. Since it doesn't run on your child's device, it can block traffic from any operating system: Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO is for you.
 
 #Pre-requisites:
 
 1. No other wifi/Internet options available to the child (such as a phone with mobile data, phone hotspot, a neighbor's wifi, etc.)
 1. Home router running opernWRT 19.07 (maybe older versions work - you tell me)
 1. External drive to store squid's cache files
-1. You made a self-signed CA certificate[https://wiki.squid-cache.org/Features/DynamicSslCert]
+1. You made a self-signed CA [certificate](https://wiki.squid-cache.org/Features/DynamicSslCert)
 
 #Assumes:
 1. The `whitelist.txt` file is currently tailored for Google Classroom and other random educational sites. You can easily add your own and remove sites that your kids don't need.
@@ -27,7 +27,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 
 #Instructions:
 
-1. Install squid[https://openwrt.org/docs/guide-user/services/proxy/proxy.squid] (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
+1. Install [squid](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
 1. Copy `myCA.pem` to `/etc/squid/certs/`
 1. Append the config in `/etc/config/firewall` to the version on your router. Find and replace xx:xx:xx:xx:xx:xx and yy:yy:yy:yy:yy:yy with actual MAC addresses.
@@ -47,4 +47,4 @@ And put some fun messages in /usr/share/squid/errors/templates/ERR_ACCESS_DENIED
 
 1. As mentioned, if they get Internet access through other means it's game over and you're back to square one.
 1. If they convince you to disable the blockade (which you can do quickly via the firewall port redirect rules) so they can quickly check on just one thing don't fall for it. As soon as you turn their back they are going to Youtube, the browser will cache the application, and it will connect directly to IP addresses which are not blocked by this squid config. Ask me how I know. Wonder what I'm working on next?
-1. Lots of other cacheing can render this ineffective (kids can and have downloaded multiple seasons worth of shows on Netflix before you set this up. Ask me how I know.) You may want to do a sweep of their favorite apps after this is setup. Chromebooks have a great feature called Powerwash[https://support.google.com/chromebook/answer/183084?hl=en] that makes this very simple.
+1. Lots of other cacheing can render this ineffective (kids can and have downloaded multiple seasons worth of shows on Netflix before you set this up. Ask me how I know.) You may want to do a sweep of their favorite apps after this is setup. Chromebooks have a great feature called [Powerwash](https://support.google.com/chromebook/answer/183084?hl=en) that makes this very simple.
