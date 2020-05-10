@@ -18,7 +18,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. The `whitelist.txt` file is currently tailored for Google Classroom and other random educational sites. You can easily add your own and remove sites that your kids don't need.
 1. You have two children - only needed in `/etc/config/firewall`. You may add or remove kiddos from this file as needed. This allows you to selectively turn off blocking for one or both children, though then they'll be able to watch Youtube again because of the dastardly client-side caching they do. Don't even get me started on Google Doodles!#@##!!%
 1. Your router's IP address is 192.168.1.1. You can change this with a search and replace in `/etc/config/firewall`.
-1. You have a guest wifi network - only needed in `/etc/config/firewall`. You may remove the guest RDR rules if you don't have one.
+1. You have a guest wifi network - only needed in `/etc/config/firewall`. You may remove the guest redirect rules if you don't have one.
 1. You know your child's device MAC address. This is usually available in the network settings on their device.
 1. You will mount a hard disk to `/tmp/squid`.
 1. You put your CA private key and certificate into one file called `/etc/squid/certs/myCA.pem`.
