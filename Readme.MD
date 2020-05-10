@@ -23,7 +23,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. You will mount a hard disk to `/tmp/squid`.
 1. You put your CA private key and certificate into one file called `/etc/squid/certs/myCA.pem`.
 1. You don't mind constantly adding sites to `/etc/squid/whitelist.txt` as teachers hand out assignments that require new random websites. Good luck blocking Youtube. Don't forget to restart squid.
-1. You already have `ssh` setup and are comfortable with the Linux command line.
+1. You already have `ssh` access to your router and are comfortable with the Linux command line.
 
 ### Instructions
 #### On your openWRT router
