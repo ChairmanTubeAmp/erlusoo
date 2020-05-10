@@ -35,7 +35,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. restart squid with `service squid restart` and the firewall with `service firewall restart`
 
 #### On your child's device(s)
-1. From your kid's device, you should see certificate errors in the browser now. This means that the firewall on your router is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out.
+1. From your kid's device, you should see certificate errors in the browser if you load a whitelisted site. This means that the firewall on your router is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out. Sites that aren't on the whitelist should show an Access Denied page. This is a small victory. Savor it. You're almost to the finish line. 
 1. Instal the self-signed certificate you generated (`myCA.der`) into the browser of your child's device as a Certificate Authority (this process varies depending on which operating system your child's device uses.)
 1. Many Google properties (such as Youtube, are you noticing a theme here?) use extensive browser caching of the webapp so you'll need to clear all browsing history and data.
 1. As your child tries to work they will encounter legitimate sites that are blocked. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
