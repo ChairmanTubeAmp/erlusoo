@@ -31,7 +31,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
 1. Copy `myCA.pem` to `/etc/squid/certs/`
 1. Create DH parameters with `openssl dhparam -outform PEM -out /etc/squid/certs/dhparam.pem 2048`
-1. Append the config in `/etc/config/firewall` to the version on your router. Find and replace xx:xx:xx:xx:xx:xx and yy:yy:yy:yy:yy:yy with actual MAC addresses.
+1. Append the config in `/etc/config/firewall` to the version on your router. Find and replace xx:xx:xx:xx:xx:xx and yy:yy:yy:yy:yy:yy with actual MAC addresses, remove/add devices, change router IP address from `192.168.1.1`, go crazy with it
 1. restart squid with `service squid restart` and the firewall with `service firewall restart`
 
 #### On your child's device(s)
