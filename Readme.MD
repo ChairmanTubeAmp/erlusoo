@@ -43,7 +43,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 tail -F /tmp/squid/log/access.log \
 |grep 403 \
 |grep -v play.google.com \
-|grep -v IP_ADDRESS_OF_OTHER_CHILD_IF_YOU_HAVE_MORE_THAN_ONE_CHILD
+|grep -v IP_ADDRESS_OF_OTHER_CHILD(REN)_IF_YOU_HAVE_MORE_THAN_ONE_CHILD
 ```
 
 Don't forget to restart squid after you add the new site.
