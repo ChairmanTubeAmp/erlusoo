@@ -26,7 +26,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. You already have `ssh` setup and are comfortable with the linux command line.
 
 #### Instructions:
-### On your openWRT router
+#### On your openWRT router
 1. Install squid using these [instructions](https://openwrt.org/docs/guide-user/services/proxy/proxy.squid) (don't bother with the ```Set up forwarding``` secion, we'll do that in Step 4) and replace `/etc/squid/squid.conf` with this version
 1. Copy `whitelist.txt` to `/etc/squid/whitelist.txt`
 1. Copy `myCA.pem` to `/etc/squid/certs/`
@@ -34,7 +34,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. Append the config in `/etc/config/firewall` to the version on your router. Find and replace xx:xx:xx:xx:xx:xx and yy:yy:yy:yy:yy:yy with actual MAC addresses.
 1. restart squid with `service squid restart` and the firewall with `service firewall restart`
 
-### On your child's device(s)
+#### On your child's device(s)
 1. From your kid's device, you should see certificate errors in the browser now. This means that the firewall is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out.
 1. Instal the self-signed certificate you generated (`myCA.der`) into the browser of your child's device as a Certificate Authority (this process varies depending on which operating system your child's device uses.)
 1. Many Google properties (such as Youtube, are you noticing a theme here?) use extensive browser caching of the webapp so you'll need to clear all browsing history and data.
