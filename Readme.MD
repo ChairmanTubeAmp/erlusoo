@@ -40,7 +40,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. Clear all browsing history and data so that you can make sure your kid's most important sites work. You might need the kid for this next step.
 1. Visit a site on the whitelist; you should not see any errors, the page should load normally with the exception of whatever ads might be present on the page. They are blocked as a nice side effect. 
 1. If the page partially loads or doesn't work, check out the step below to watch for blocked sites and add them one by one until the page works fully. Don't forget to restart squid.
-1. As your child tries to work they will encounter legitimate sites that are blocked. Tell them to come to you right away instead of staring off into space all day or reading The Lightning Thief for the 23rd time. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
+1. As your child tries to work they will encounter legitimate sites that are blocked. Tell them to come to you right away instead of staring off into space all day or reading *The Lightning Thief* for the 23rd time. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
 ```bash
 tail -F /tmp/squid/log/access.log \
 |grep 403 \
