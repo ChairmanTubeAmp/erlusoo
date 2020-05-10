@@ -16,13 +16,13 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 
 #### Assumes:
 1. The `whitelist.txt` file is currently tailored for Google Classroom and other random educational sites. You can easily add your own and remove sites that your kids don't need.
-1. You have two children - only needed in `/etc/config/firewall`. You may add or remove kiddos from this file as needed. This allows you to selectively turn off blocking for one or both children, though then they'll be able to watch youtube again because of the dastardly client-side caching they do. Don't even get me started on Google Doodles!#@##!!%
+1. You have two children - only needed in `/etc/config/firewall`. You may add or remove kiddos from this file as needed. This allows you to selectively turn off blocking for one or both children, though then they'll be able to watch Youtube again because of the dastardly client-side caching they do. Don't even get me started on Google Doodles!#@##!!%
 1. Your router's IP address is 192.168.1.1. You can change this with a search and replace in `/etc/config/firewall`.
 1. You have a guest wifi network - only needed in `/etc/config/firewall`. You may remove the guest RDR rules if you don't have one.
 1. You know your child's device MAC address. This is usually available in the network settings on their device.
 1. You will mount a hard disk to `/tmp/squid`.
 1. You put your CA certificate private key and cert into one file called `/etc/squid/certs/myCA.pem`.
-1. You don't mind constantly adding sites to `/etc/squid/whitelist.txt` as teachers hand out assignments that require new random websites. Good luck blocking youtube. Don't forget to restart squid.
+1. You don't mind constantly adding sites to `/etc/squid/whitelist.txt` as teachers hand out assignments that require new random websites. Good luck blocking Youtube. Don't forget to restart squid.
 1. You already have `ssh` setup and are comfortable with the linux command line.
 
 #### Instructions:
@@ -34,7 +34,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. restart squid with `service squid restart` and the firewall with `service firewall restart`
 1. From your kid's device, you should see certificate errors in the browser now. This means that the firewall is sending traffic from your kid's device to squid, and squid is now in control. Your kid's browser just doesn't trust the squid certificate yet and that's why it's freaking out.
 1. Instal the self-signed certificate you generated (`myCA.der`) into the browser of your child's device as a Certificate Authority (this process varies depending on which operating system your child's device uses.)
-1. Many Google properties (such as youtube) use extensive browser caching of the webapp so you'll need to clear all browsing history and data.
+1. Many Google properties (such as Youtube, are you noticing a theme here?) use extensive browser caching of the webapp so you'll need to clear all browsing history and data.
 1. As your child tries to work they will encounter legitimate sites that are blocked. Use this to find out which ones are blocked and add them to `/etc/squid/whitelist.txt`:
 
 `tail -F /tmp/squid/log/access.log |grep 403 |grep -v play.google.com |grep -v IP_ADDRESS_OF_OTHER_CHILD_IF_YOU_HAVE_MORE_THAN_ONE_CHILD`
