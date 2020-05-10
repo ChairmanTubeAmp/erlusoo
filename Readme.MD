@@ -21,7 +21,7 @@ Using the principle of least priviledge and a few weeks of feedback from my kids
 1. You have a guest wifi network - only needed in `/etc/config/firewall`. You may remove the guest RDR rules if you don't have one.
 1. You know your child's device MAC address. This is usually available in the network settings on their device.
 1. You will mount a hard disk to `/tmp/squid`.
-1. You put your CA certificate private key and cert into one file called `/etc/squid/certs/myCA.pem`.
+1. You put your CA private key and certificate into one file called `/etc/squid/certs/myCA.pem`.
 1. You don't mind constantly adding sites to `/etc/squid/whitelist.txt` as teachers hand out assignments that require new random websites. Good luck blocking Youtube. Don't forget to restart squid.
 1. You already have `ssh` setup and are comfortable with the linux command line.
 
