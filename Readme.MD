@@ -5,7 +5,7 @@
 
 Your kid is stuck at home and is supposed to be reading and doing school work with whatever minimal guidance your teachers are able to provide. But most of the day they watch Youtube, play games you've never heard of (and some you have), and generally waste their day online. Wouldn't it be nice if they were only able to vists sites specifically needed for their school work?
 
-Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most [openWRT](https://openwrt.org) routers. Since it runs on your router and not your child's device, squid can block traffic from any operating system: GNU/Linux, Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO is for you.
+Using the principle of least priviledge and a few weeks of feedback from my kids, I've constructed this squid proxy config which runs on most [openWRT](https://openwrt.org) routers. Since it runs on your router and not your child's device, squid can block traffic from any operating system: GNU/Linux, Windows, macOS, ChromeOS (Chromebook), Android, iOS, etc. Maybe you've found it hard to configure parental controls when your kid has so many different devices? Maybe you would like to consolidate rules for all kids and all devices in one place? ERLUSOO (earl-oooh-sue) is for you.
 
 #### Pre-requisites
 
