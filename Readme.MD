@@ -48,7 +48,7 @@ tail -F /tmp/squid/log/access.log \
 |grep -v IP_ADDRESS_OF_OTHER_CHILD(REN)_IF_YOU_HAVE_MORE_THAN_ONE_CHILD
 ```
 
-Don't forget to restart squid after you add the new site.
+Don't forget to restart squid.
 
 And put some fun messages in /usr/share/squid/errors/templates/ERR_ACCESS_DENIED because they will see this page a lot! Really spice things up to show them you care about their education.
 
